@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+<!--<script type="text/javascript" src="a.js"></script>-->
+<script type="text/javascript">
+    function Person() {
+        var age = new Date().getFullYear() - 18;
+        // Object.defineProperty 设置对象属性的描述字段里面有两个属性 set （设置属性时被调用）和get（获取属性时被调用
+        Object.defineProperty(this,'age',{
+            get: function () {
+                console.log("内部存储数据为:" + age);
+                return new Date().getFullYear() - age;
+                },
+            set: function (value) {
+                console.log(value);
+                age = value;
+            }
+        });
+    }
+// console.log( new Date().getFullYear())
+    var p = new Person();
+    // p.age = 1994;
+    alert("外部获取到的数据为:" + p.age);
+</script>
+
+
+</body>
+</html>
