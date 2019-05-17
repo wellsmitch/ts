@@ -198,13 +198,26 @@ var adddd = {
 };
 console.log(adddd.dd.a);
 
-function a() {
-    var a_ = 1;
-    return function () {
-        console.log(a_);
-        return a_ ++
-    }
+// function a() {
+//     var a_ = 1;
+//     return function () {
+//         console.log(a_);
+//         return a_ ++
+//     }
+// }
+// a()();
+
+
+// 泛型接口
+interface ConfigFn {
+    (value:string, value2:string):string
 }
-a()();
+
+var setData: ConfigFn = function (value1: string, value2:string):string {
+    return value1 + value2;
+};
+
+console.log(setData('张三','18'));
+
 
 

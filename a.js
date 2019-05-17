@@ -186,11 +186,16 @@ var adddd = {
     }
 };
 console.log(adddd.dd.a);
-function a() {
-    var a_ = 1;
-    return function () {
-        console.log(a_);
-        return a_++;
-    };
-}
-a()();
+// function a() {
+//     var a_ = 1;
+//     return function () {
+//         console.log(a_);
+//         return a_ ++
+//     }
+// }
+// a()();
+console.log(222);
+var setData = function (value1, value2) {
+    return value1 + value2;
+};
+console.log(setData('张三', '18'));
